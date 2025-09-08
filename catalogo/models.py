@@ -14,7 +14,7 @@ class Diretor(models.Model):
     
 class Filme(models.Model):
     titulo = models.CharField(max_length=150)
-    ano_lancamendo = models.IntegerField()
+    ano_lancamento = models.IntegerField()
     nota_imdb = models.DecimalField(max_digits=3, decimal_places=1)
     """Se alguém deletar um gênero que ainda tem filmes associados a ele, a exclusão não é permitida"""
     genero = models.ForeignKey(Genero, on_delete=models.PROTECT, related_name='filmes')
