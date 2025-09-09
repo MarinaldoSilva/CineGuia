@@ -11,6 +11,6 @@ urlpatterns = [
     path('', include(router.urls)),
 
     #url generics
-    path('filmes', FilmeListCreateView.as_view(), name='filme_list'),
-    path('filmes<int:pk>', FilmeRetrieveUpdateDestroy.as_view(), name='filme_detail')
+    path('filmes/', FilmeListCreateView.as_view(), name='filme_list'),
+    path('filmes<int:pk>/', FilmeRetrieveUpdateDestroy.as_view(), name='filme_detail')
 ]
